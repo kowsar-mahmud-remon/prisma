@@ -9,4 +9,6 @@ router.get("/", PostController.getAllPostController);
 
 router.patch("/:id", PostController.updatePost);
 
+router.delete("/:id", PostController.deletePost);
+
 export const PostRoutes = router;
