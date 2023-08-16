@@ -16,8 +16,9 @@ const createPostController = async (req: Request, res: Response) => {
 };
 
 const getAllPostController = async (req: Request, res: Response) => {
+  const options = req.query;
   try {
-    const result = await PostService.getAllPost();
+    const result = await PostService.getAllPost(options);
 
     res.send({
       success: true,
